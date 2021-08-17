@@ -9,8 +9,8 @@ import javax.persistence.*;
 @Getter
 @Setter
 @Entity
-@Table(name = "parent")
-public class Parent {
+@Table(name = "child")
+public class Child {
 
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -26,6 +26,8 @@ public class Parent {
     @Column(name = "totalAmount", nullable = false)
     private double totalAmount;
 
-    @Column(name = "totalPaidAmount", nullable = false)
-    private double totalPaidAmount;
+    @Column(name = "paidAmount", nullable = false)
+    private double paidAmount;
+
+    private int parentId;
 }
